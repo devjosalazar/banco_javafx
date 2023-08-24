@@ -1,0 +1,16 @@
+package co.edu.uniquindio.banco.bancouq.services;
+
+import co.edu.uniquindio.banco.bancouq.exceptions.EmpleadoException;
+import co.edu.uniquindio.banco.bancouq.model.Empleado;
+
+import java.util.ArrayList;
+
+
+public interface IBancoService {
+	public Empleado crearEmpleado(String nombre, String apellido, String cedula, String fechaNacimiento) throws EmpleadoException;
+	public boolean actualizarEmpleado(String cedulaActual,String nombre, String apellido, String cedula, String fechaNacimiento) throws EmpleadoException;
+	public Boolean eliminarEmpleado(String cedula)throws EmpleadoException;
+	public boolean  verificarEmpleadoExistente(String cedula);
+	public Empleado obtenerEmpleado(String cedula);
+	public ArrayList<Empleado> obtenerEmpleados();
+}
