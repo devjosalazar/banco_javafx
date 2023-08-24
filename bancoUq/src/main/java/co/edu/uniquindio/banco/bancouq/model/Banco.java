@@ -1,9 +1,8 @@
 package co.edu.uniquindio.banco.bancouq.model;
 
 import co.edu.uniquindio.banco.bancouq.exceptions.EmpleadoException;
-import co.edu.uniquindio.banco.bancouq.services.IBancoService;
+import co.edu.uniquindio.banco.bancouq.model.services.IBancoService;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 

@@ -1,4 +1,4 @@
-package co.edu.uniquindio.banco.bancouq.services;
+package co.edu.uniquindio.banco.bancouq.model.services;
 
 import co.edu.uniquindio.banco.bancouq.exceptions.EmpleadoException;
 import co.edu.uniquindio.banco.bancouq.model.Empleado;

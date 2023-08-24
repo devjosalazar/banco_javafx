@@ -1,6 +1,6 @@
 package co.edu.uniquindio.banco.bancouq;
 
-import co.edu.uniquindio.banco.bancouq.controller.BancoViewController;
+import co.edu.uniquindio.banco.bancouq.viewController.BancoViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
