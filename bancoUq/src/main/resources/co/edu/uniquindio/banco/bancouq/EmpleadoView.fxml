@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="563.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.banco.bancouq.viewController.EmpleadoViewController">
    <children>
       <SplitPane dividerPositions="0.5078347578347577" layoutX="4.0" layoutY="8.0" orientation="VERTICAL" prefHeight="563.0" prefWidth="738.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="603.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="133.0" prefWidth="736.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="27.0" text="Nombres:" />
+                  <Label layoutX="404.0" layoutY="27.0" text="Apellidos:" />
+                  <Label layoutX="23.0" layoutY="71.0" text="Cédula:" />
+                  <Label layoutX="357.0" layoutY="71.0" text="Fecha nacimiento:" />
+                  <TextField layoutX="82.0" layoutY="23.0" prefHeight="25.0" prefWidth="251.0" />
+                  <TextField layoutX="465.0" layoutY="23.0" prefHeight="25.0" prefWidth="251.0" />
+                  <TextField layoutX="79.0" layoutY="67.0" prefHeight="25.0" prefWidth="251.0" />
+                  <TextField layoutX="462.0" layoutY="67.0" prefHeight="25.0" prefWidth="251.0" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="603.0">
+               <children>
+                  <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="711.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
         </items>
       </SplitPane>
    </children>
