@@ -74,6 +74,10 @@ public class Banco implements IBancoService {
 		return nuevoEmpleado;
 	}
 
+	public void agregarEmpleado(Empleado nuevoEmpleado) throws EmpleadoException{
+			getListaEmpleados().add(nuevoEmpleado);
+	}
+
 
 	@Override
 	public boolean actualizarEmpleado(String cedulaActual, String nombre, String apellido, String cedula,
@@ -109,14 +113,15 @@ public class Banco implements IBancoService {
 	}
 
 	@Override
-	public boolean verificarEmpleadoExistente(String cedula) {
-		Empleado empleado = null;
-		empleado = obtenerEmpleado(cedula);
-		if(empleado == null)
+	public boolean verificarEmpleadoExistente(String cedula) throws EmpleadoException {
+		if(empleadoExiste(cedula)){
+			throw new EmpleadoException("El empleado con cedula: "+cedula+" ya existe");
+		}else{
 			return false;
-		else
-			return true;
+		}
 	}
+
+
 
 	@Override
 	public Empleado obtenerEmpleado(String cedula) {
@@ -134,5 +139,16 @@ public class Banco implements IBancoService {
 	public ArrayList<Empleado> obtenerEmpleados() {
 		// TODO Auto-generated method stub
 		return getListaEmpleados();
+	}
+
+	public boolean empleadoExiste(String cedula) {
+		boolean empleadoEncontrado = false;
+		for (Empleado empleado : getListaEmpleados()) {
+			if(empleado.getCedula().equalsIgnoreCase(cedula)){
+				empleadoEncontrado = true;
+				break;
+			}
+		}
+		return empleadoEncontrado;
 	}
 }

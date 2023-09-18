@@ -1,14 +1,16 @@
 package co.edu.uniquindio.banco.bancouq.controller.service;
 
+import co.edu.uniquindio.banco.bancouq.mapping.dto.EmpleadoDto;
 import co.edu.uniquindio.banco.bancouq.model.Empleado;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public interface IModelFactoryService {
-	Empleado crearEmpleado(String nombre, String apellido, String cedula, String fechaNacimiento);
-	Boolean eliminarEmpleado(String cedula);
-	Empleado obtenerEmpleado(String cedula);
-	ArrayList<Empleado> obtenerEmpleados();
-	boolean actualizarEmpleado(String cedulaActual, String nombre, String apellido, String cedula, String fechaNacimiento);
+
+	List<EmpleadoDto> obtenerEmpleados();
+	boolean agregarEmpleado(EmpleadoDto empleadoDto);
+
+
 }

@@ -9,4 +9,8 @@ public class EmpleadoController implements IEmpleadoControllerService {
         System.out.println("Llamando al singleton desde EmpleadoServiceController");
         modelFactoryController = ModelFactoryController.getInstance();
     }
+
+
+
+
 }
