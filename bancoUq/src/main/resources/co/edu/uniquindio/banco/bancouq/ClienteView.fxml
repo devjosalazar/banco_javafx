@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.banco.bancouq.viewController.ClienteViewController">
+   <children>
+      <Button layoutX="181.0" layoutY="149.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="208.0" text="HOla mundo" />
+   </children>
+</AnchorPane>

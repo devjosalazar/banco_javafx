@@ -21,6 +21,7 @@
                   <TextField layoutX="465.0" layoutY="23.0" prefHeight="25.0" prefWidth="251.0" />
                   <TextField layoutX="79.0" layoutY="67.0" prefHeight="25.0" prefWidth="251.0" />
                   <TextField layoutX="462.0" layoutY="67.0" prefHeight="25.0" prefWidth="251.0" />
+                  <Label layoutX="26.0" layoutY="118.0" text="Dirección:" />
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="603.0">
                <children>
