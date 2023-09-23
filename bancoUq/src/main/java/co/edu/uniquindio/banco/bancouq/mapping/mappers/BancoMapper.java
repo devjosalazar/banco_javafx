@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Mapper
-public interface EmpleadoMapper {
-    EmpleadoMapper INSTANCE = Mappers.getMapper(EmpleadoMapper.class);
+public interface BancoMapper {
+    BancoMapper INSTANCE = Mappers.getMapper(BancoMapper.class);
 
     @Named("empleadoToEmpleadoDto")
     EmpleadoDto empleadoToEmpleadoDto(Empleado empleado);

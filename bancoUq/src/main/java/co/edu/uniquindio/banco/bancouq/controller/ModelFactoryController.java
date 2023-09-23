@@ -1,7 +1,7 @@
 package co.edu.uniquindio.banco.bancouq.controller;
 
 import co.edu.uniquindio.banco.bancouq.mapping.dto.EmpleadoDto;
-import co.edu.uniquindio.banco.bancouq.mapping.mappers.EmpleadoMapper;
+import co.edu.uniquindio.banco.bancouq.mapping.mappers.BancoMapper;
 import co.edu.uniquindio.banco.bancouq.model.*;
 import co.edu.uniquindio.banco.bancouq.exceptions.*;
 import co.edu.uniquindio.banco.bancouq.controller.service.IModelFactoryService;
@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ModelFactoryController implements IModelFactoryService {
     Banco banco;
-    EmpleadoMapper mapper = EmpleadoMapper.INSTANCE;
+    BancoMapper mapper = BancoMapper.INSTANCE;
 
     //------------------------------  Singleton ------------------------------------------------
     // Clase estatica oculta. Tan solo se instanciara el singleton una vez
@@ -45,14 +45,16 @@ public class ModelFactoryController implements IModelFactoryService {
 
     @Override
     public List<EmpleadoDto> obtenerEmpleados() {
-        return mapper.getEmpleadosDto(banco.getListaEmpleados());
+        List<EmpleadoDto> list = mapper.getEmpleadosDto(banco.getListaEmpleados());
+        return list;
     }
 
     @Override
     public boolean agregarEmpleado(EmpleadoDto empleadoDto) {
         try{
             if(!banco.verificarEmpleadoExistente(empleadoDto.cedula())) {
-                getBanco().agregarEmpleado(mapper.empleadoDtoToEmpleado(empleadoDto));
+                Empleado empleado = mapper.empleadoDtoToEmpleado(empleadoDto);
+                getBanco().agregarEmpleado(empleado);
             }
             return true;
         }catch (EmpleadoException e){
