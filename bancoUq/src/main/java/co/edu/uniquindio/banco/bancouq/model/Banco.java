@@ -1,37 +1,35 @@
 package co.edu.uniquindio.banco.bancouq.model;
 
 import co.edu.uniquindio.banco.bancouq.exceptions.EmpleadoException;
+import co.edu.uniquindio.banco.bancouq.mapping.dto.EmpleadoDto;
 import co.edu.uniquindio.banco.bancouq.model.services.IBancoService;
 
 import java.util.ArrayList;
 
 
 public class Banco implements IBancoService {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	
 	ArrayList<Cliente> listaClientes = new ArrayList<>();
 	ArrayList<Empleado> listaEmpleados = new ArrayList<>();
 	ArrayList<Cuenta> listaCuentas = new ArrayList<>();
 	ArrayList<Transaccion> listaTransaccionesAsociadas = new ArrayList<Transaccion>();
-	
+
 	public Banco() {
-		
+
 	}
-	
 
 	public ArrayList<Cliente> getListaClientes() {
 		return listaClientes;
 	}
+
 	public void setListaClientes(ArrayList<Cliente> listaClientes) {
 		this.listaClientes = listaClientes;
 	}
+
 	public ArrayList<Empleado> getListaEmpleados() {
 		return listaEmpleados;
 	}
+
 	public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
 		this.listaEmpleados = listaEmpleados;
 	}
@@ -55,11 +53,9 @@ public class Banco implements IBancoService {
 		this.listaTransaccionesAsociadas = listaTransaccionesAsociadas;
 	}
 
-
 	@Override
 	public Empleado crearEmpleado(String nombre, String apellido, String cedula, String fechaNacimiento) throws EmpleadoException{
 		Empleado nuevoEmpleado = null;
-		//1. verificar si existe
 		boolean empleadoExiste = verificarEmpleadoExistente(cedula);
 		if(empleadoExiste){
 			throw new EmpleadoException("El empleado con cedula: "+cedula+" ya existe");
@@ -75,27 +71,25 @@ public class Banco implements IBancoService {
 	}
 
 	public void agregarEmpleado(Empleado nuevoEmpleado) throws EmpleadoException{
-			getListaEmpleados().add(nuevoEmpleado);
+		getListaEmpleados().add(nuevoEmpleado);
 	}
 
-
 	@Override
-	public boolean actualizarEmpleado(String cedulaActual, String nombre, String apellido, String cedula,
-			String fechaNacimiento) throws EmpleadoException {
-		// TODO Auto-generated method stub
-		Empleado empleado = null;
-		boolean flagExiste = false;
-		empleado = obtenerEmpleado(cedula);
-		if(empleado == null)
+	public boolean actualizarEmpleado(String cedulaActual, Empleado empleado) throws EmpleadoException {
+		Empleado empleadoActual = obtenerEmpleado(cedulaActual);
+		if(empleadoActual == null)
 			throw new EmpleadoException("El empleado a actualizar no existe");
 		else{
-			empleado = new Empleado();
-			empleado.setNombre(nombre);
-			empleado.setApellido(apellido);
-			empleado.setCedula(cedula);
-			empleado.setFechaNacimiento(fechaNacimiento);
+			empleadoActual.setNombre(empleado.getNombre());
+			empleadoActual.setApellido(empleado.getApellido());
+			empleadoActual.setCedula(empleado.getCedula());
+			empleadoActual.setTelefono(empleado.getTelefono());
+			empleadoActual.setCorreo(empleado.getCorreo());
+			empleadoActual.setFechaNacimiento(empleado.getFechaNacimiento());
+			empleadoActual.setSalario(empleado.getSalario());
+			empleadoActual.setCodigo(empleado.getCodigo());
+			return true;
 		}
-		return flagExiste;
 	}
 
 	@Override
@@ -120,7 +114,6 @@ public class Banco implements IBancoService {
 			return false;
 		}
 	}
-
 
 
 	@Override

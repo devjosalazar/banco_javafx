@@ -8,7 +8,6 @@ public record EmpleadoDto(
         String direccion,
         String correo,
         String fechaNacimiento,
-
         Double salario,
         String codigo) {
 }

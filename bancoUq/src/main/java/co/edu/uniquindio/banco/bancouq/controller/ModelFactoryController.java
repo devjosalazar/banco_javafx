@@ -45,8 +45,7 @@ public class ModelFactoryController implements IModelFactoryService {
 
     @Override
     public List<EmpleadoDto> obtenerEmpleados() {
-        List<EmpleadoDto> list = mapper.getEmpleadosDto(banco.getListaEmpleados());
-        return list;
+       return  mapper.getEmpleadosDto(banco.getListaEmpleados());
     }
 
     @Override
@@ -58,11 +57,12 @@ public class ModelFactoryController implements IModelFactoryService {
             }
             return true;
         }catch (EmpleadoException e){
-            e.printStackTrace();
+            e.getMessage();
             return false;
         }
     }
 
+    @Override
     public boolean eliminarEmpleado(String cedula) {
         boolean flagExiste = false;
         try {
@@ -74,30 +74,15 @@ public class ModelFactoryController implements IModelFactoryService {
         return flagExiste;
     }
 
-    public Empleado crearEmpleado(String nombre, String apellido, String cedula, String fechaNacimiento) {
-        Empleado empleado = null;
+    @Override
+    public boolean actualizarEmpleado(String cedulaActual, EmpleadoDto empleadoDto) {
         try {
-            empleado = getBanco().crearEmpleado(nombre, apellido, cedula, fechaNacimiento);
+            Empleado empleado = mapper.empleadoDtoToEmpleado(empleadoDto);
+            getBanco().actualizarEmpleado(cedulaActual, empleado);
+            return true;
         } catch (EmpleadoException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
+            return false;
         }
-        return empleado;
     }
-
-
-    public boolean actualizarEmpleado(String cedulaActual, String nombre, String apellido, String cedula,
-                                      String fechaNacimiento) {
-        boolean flagExiste = false;
-        try {
-            flagExiste = getBanco().actualizarEmpleado(cedulaActual, nombre, apellido, cedula, fechaNacimiento);
-        } catch (EmpleadoException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return flagExiste;
-    }
-
-
-
 }

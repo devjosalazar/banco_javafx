@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="563.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.banco.bancouq.viewController.EmpleadoViewController">
+<AnchorPane prefHeight="563.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.banco.bancouq.viewController.EmpleadoViewController">
    <children>
       <SplitPane dividerPositions="0.5078347578347577" layoutX="4.0" layoutY="8.0" orientation="VERTICAL" prefHeight="563.0" prefWidth="738.0">
         <items>
@@ -31,9 +31,9 @@
                   <TextField fx:id="txtCorreo" layoutX="466.0" layoutY="125.0" prefHeight="27.0" prefWidth="251.0" />
                   <TextField fx:id="txtSalario" layoutX="83.0" layoutY="174.0" prefHeight="27.0" prefWidth="251.0" />
                   <TextField fx:id="txtCodigo" layoutX="464.0" layoutY="174.0" prefHeight="27.0" prefWidth="251.0" />
-                  <Button fx:id="btnActualizar" layoutX="155.0" layoutY="236.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" text="Actualizar" />
-                  <Button fx:id="btnNuevo" layoutX="304.0" layoutY="236.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" text="Nuevo" />
-                  <Button fx:id="btnAgregar" layoutX="457.0" layoutY="236.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" text="Agregar" />
+                  <Button fx:id="btnActualizar" layoutX="464.0" layoutY="236.0" mnemonicParsing="false" onAction="#actualizarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" text="Actualizar" />
+                  <Button fx:id="btnNuevo" layoutX="83.0" layoutY="236.0" mnemonicParsing="false" onAction="#nuevoEmpleadoAction" prefHeight="27.0" prefWidth="100.0" text="Nuevo" />
+                  <Button fx:id="btnAgregar" layoutX="283.0" layoutY="236.0" mnemonicParsing="false" onAction="#agregarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" text="Agregar" />
                   <Separator layoutX="13.0" layoutY="217.0" prefHeight="2.0" prefWidth="711.0" />
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="603.0">
@@ -50,7 +50,7 @@
                         <TableColumn fx:id="tcCodigo" prefWidth="101.0" text="Codigo" />
                     </columns>
                   </TableView>
-                  <Button layoutX="300.0" layoutY="228.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" text="Actualizar" />
+                  <Button fx:id="btnEliminar" layoutX="300.0" layoutY="228.0" mnemonicParsing="false" onAction="#eliminarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" text="Eliminar" />
                </children></AnchorPane>
         </items>
       </SplitPane>

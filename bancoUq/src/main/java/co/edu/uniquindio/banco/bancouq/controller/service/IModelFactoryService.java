@@ -12,5 +12,9 @@ public interface IModelFactoryService {
 	List<EmpleadoDto> obtenerEmpleados();
 	boolean agregarEmpleado(EmpleadoDto empleadoDto);
 
+	boolean eliminarEmpleado(String cedula);
+
+	boolean actualizarEmpleado(String cedulaActual, EmpleadoDto empleadoDto);
+
 
 }

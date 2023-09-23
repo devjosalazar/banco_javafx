@@ -2,9 +2,7 @@ package co.edu.uniquindio.banco.bancouq.controller;
 
 import co.edu.uniquindio.banco.bancouq.controller.service.IEmpleadoControllerService;
 import co.edu.uniquindio.banco.bancouq.mapping.dto.EmpleadoDto;
-import javafx.collections.ObservableList;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EmpleadoController implements IEmpleadoControllerService {
@@ -14,9 +12,22 @@ public class EmpleadoController implements IEmpleadoControllerService {
         modelFactoryController = ModelFactoryController.getInstance();
     }
 
+    public List<EmpleadoDto> obtenerEmpleados() {
+        return modelFactoryController.obtenerEmpleados();
+    }
 
     @Override
-    public List<EmpleadoDto> getEmpleados() {
-        return modelFactoryController.obtenerEmpleados();
+    public boolean agregarEmpleado(EmpleadoDto empleadoDto) {
+        return modelFactoryController.agregarEmpleado(empleadoDto);
+    }
+
+    @Override
+    public boolean eliminarEmpleado(String cedula) {
+        return modelFactoryController.eliminarEmpleado(cedula);
+    }
+
+    @Override
+    public boolean actualizarEmpleado(String cedulaActual, EmpleadoDto empleadoDto) {
+        return modelFactoryController.actualizarEmpleado(cedulaActual, empleadoDto);
     }
 }
