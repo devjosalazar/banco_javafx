@@ -1,8 +1,7 @@
 module co.edu.uniquindio.banco.bancouq {
     requires javafx.controls;
     requires javafx.fxml;
-            
-        requires org.controlsfx.controls;
+    requires org.controlsfx.controls;
     requires org.mapstruct;
 
     opens co.edu.uniquindio.banco.bancouq to javafx.fxml;

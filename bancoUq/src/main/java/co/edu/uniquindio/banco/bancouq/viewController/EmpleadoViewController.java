@@ -158,7 +158,6 @@ public class EmpleadoViewController {
 
     @FXML
     void eliminarEmpleadoAction(ActionEvent event) {
-
         eliminarEmpleado();
     }
 
@@ -178,7 +177,7 @@ public class EmpleadoViewController {
                 mostrarMensaje("Notificación empleado", "Empleado creado", "El empleado se ha creado con éxito", AlertType.INFORMATION);
                 limpiarCamposEmpleado();
             }else{
-                mostrarMensaje("Notificación empleado", "Empleado no creado", "El empleado no se ha creado con éxito", AlertType.INFORMATION);
+                mostrarMensaje("Notificación empleado", "Empleado no creado", "El empleado no se ha creado con éxito", AlertType.ERROR);
             }
         }else{
             mostrarMensaje("Notificación empleado", "Empleado no creado", "Los datos ingresados son invalidos", AlertType.ERROR);
