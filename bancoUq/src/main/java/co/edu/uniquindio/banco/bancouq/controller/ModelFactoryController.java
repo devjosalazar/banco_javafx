@@ -6,7 +6,9 @@ import co.edu.uniquindio.banco.bancouq.model.*;
 import co.edu.uniquindio.banco.bancouq.exceptions.*;
 import co.edu.uniquindio.banco.bancouq.controller.service.IModelFactoryService;
 import co.edu.uniquindio.banco.bancouq.utils.BancoUtils;
+import co.edu.uniquindio.banco.bancouq.utils.Persistencia;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,8 +28,47 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     public ModelFactoryController() {
+        //1. inicializar datos y luego guardarlo en archivos
         System.out.println("invocación clase singleton");
-        cargarDatosBase();
+//        cargarDatosBase();
+//        salvarDatosPrueba();
+
+        //2. Cargar los datos de los archivos
+//		cargarDatosDesdeArchivos();
+
+        //3. Guardar y Cargar el recurso serializable binario
+//		cargarResourceBinario();
+//		guardarResourceBinario();
+
+        //4. Guardar y Cargar el recurso serializable XML
+//		guardarResourceXML();
+        cargarResourceXML();
+
+        //Siempre se debe verificar si la raiz del recurso es null
+
+        if(banco == null){
+            cargarDatosBase();
+            guardarResourceXML();
+        }
+        registrarAccionesSistema("Inicio de sesión", 1, "inicioSesión");
+    }
+
+    private void cargarDatosDesdeArchivos() {
+        banco = new Banco();
+        try {
+            Persistencia.cargarDatosArchivos(banco);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void salvarDatosPrueba() {
+        try {
+            Persistencia.guardarEmpleados(getBanco().getListaEmpleados());
+            Persistencia.guardarClientes(getBanco().getListaClientes());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void cargarDatosBase() {
@@ -84,5 +125,25 @@ public class ModelFactoryController implements IModelFactoryService {
             e.printStackTrace();
             return false;
         }
+    }
+
+    private void cargarResourceXML() {
+        banco = Persistencia.cargarRecursoBancoXML();
+    }
+
+    private void guardarResourceXML() {
+        Persistencia.guardarRecursoBancoXML(banco);
+    }
+
+    private void cargarResourceBinario() {
+        banco = Persistencia.cargarRecursoBancoBinario();
+    }
+
+    private void guardarResourceBinario() {
+        Persistencia.guardarRecursoBancoBinario(banco);
+    }
+
+    public void registrarAccionesSistema(String mensaje, int nivel, String accion) {
+        Persistencia.guardaRegistroLog(mensaje, nivel, accion);
     }
 }

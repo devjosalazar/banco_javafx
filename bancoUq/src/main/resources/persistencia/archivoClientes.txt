@@ -1,0 +1,3 @@
+juan,arias,125454,Armenia,uni1@,12454,125444
+Pedro,Perez,77787,Pererira,uni2@,12454,125444
+Alberto,Arias,12555,Pererira,uni3@,12454,125444

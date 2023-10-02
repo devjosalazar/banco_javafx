@@ -3,6 +3,8 @@ module co.edu.uniquindio.banco.bancouq {
     requires javafx.fxml;
     requires org.controlsfx.controls;
     requires org.mapstruct;
+    requires java.desktop;
+    requires java.logging;
 
     opens co.edu.uniquindio.banco.bancouq to javafx.fxml;
     exports co.edu.uniquindio.banco.bancouq;

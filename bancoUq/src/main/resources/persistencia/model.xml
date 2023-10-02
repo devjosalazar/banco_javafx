@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.9" class="java.beans.XMLDecoder">
+ <object class="co.edu.uniquindio.banco.bancouq.model.Banco" id="Banco0">
+  <void property="listaClientes">
+   <void method="add">
+    <object class="co.edu.uniquindio.banco.bancouq.model.Cliente">
+     <void property="apellido">
+      <string>arias</string>
+     </void>
+     <void property="cedula">
+      <string>125454</string>
+     </void>
+     <void property="correo">
+      <string>uni1@</string>
+     </void>
+     <void property="direccion">
+      <string>Armenia</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>12454</string>
+     </void>
+     <void property="nombre">
+      <string>juan</string>
+     </void>
+     <void property="telefono">
+      <string>125444</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.banco.bancouq.model.Cliente">
+     <void property="apellido">
+      <string>Perez</string>
+     </void>
+     <void property="cedula">
+      <string>77787</string>
+     </void>
+     <void property="correo">
+      <string>uni2@</string>
+     </void>
+     <void property="direccion">
+      <string>Pererira</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>12454</string>
+     </void>
+     <void property="nombre">
+      <string>Pedro</string>
+     </void>
+     <void property="telefono">
+      <string>125444</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.banco.bancouq.model.Cliente">
+     <void property="apellido">
+      <string>Arias</string>
+     </void>
+     <void property="cedula">
+      <string>12555</string>
+     </void>
+     <void property="correo">
+      <string>uni3@</string>
+     </void>
+     <void property="direccion">
+      <string>Pererira</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>12454</string>
+     </void>
+     <void property="nombre">
+      <string>Alberto</string>
+     </void>
+     <void property="telefono">
+      <string>125444</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaEmpleados">
+   <void method="add">
+    <object class="co.edu.uniquindio.banco.bancouq.model.Empleado">
+     <void property="apellido">
+      <string>perez</string>
+     </void>
+     <void property="cedula">
+      <string>125454</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>13-08-2000</string>
+     </void>
+     <void property="nombre">
+      <string>Juan el que pregunta</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.banco.bancouq.model.Empleado">
+     <void property="apellido">
+      <string>alzate</string>
+     </void>
+     <void property="cedula">
+      <string>125454</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>21-08-2000</string>
+     </void>
+     <void property="nombre">
+      <string>Ana naria</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.banco.bancouq.model.Empleado">
+     <void property="apellido">
+      <string>perez</string>
+     </void>
+     <void property="cedula">
+      <string>125454</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>01-08-2000</string>
+     </void>
+     <void property="nombre">
+      <string>Pedro</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

@@ -4,10 +4,11 @@ import co.edu.uniquindio.banco.bancouq.exceptions.EmpleadoException;
 import co.edu.uniquindio.banco.bancouq.mapping.dto.EmpleadoDto;
 import co.edu.uniquindio.banco.bancouq.model.services.IBancoService;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Banco implements IBancoService {
+public class Banco implements IBancoService, Serializable {
 	private static final long serialVersionUID = 1L;
 	ArrayList<Cliente> listaClientes = new ArrayList<>();
 	ArrayList<Empleado> listaEmpleados = new ArrayList<>();
