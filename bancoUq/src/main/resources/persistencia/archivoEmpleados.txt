@@ -1,3 +1,0 @@
-Pepito,perez,125454,13-08-2000
-Ana naria,alzate,125454,21-08-2000
-Pedro,perez,125454,01-08-2000
