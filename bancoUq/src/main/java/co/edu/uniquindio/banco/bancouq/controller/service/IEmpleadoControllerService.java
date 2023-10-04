@@ -14,4 +14,6 @@ public interface IEmpleadoControllerService {
     boolean eliminarEmpleado(String cedula);
 
     boolean actualizarEmpleado(String cedulaActual, EmpleadoDto empleadoDto);
+
+    void registrarAcciones(String mensaje, int nivel, String accion);
 }

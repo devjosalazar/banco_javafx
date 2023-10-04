@@ -1,20 +1,29 @@
-Oct 02, 2023 2:52:02 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 2:54:20 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 3:14:53 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 3:19:48 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 3:21:55 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 3:25:06 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 3:27:20 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 3:28:29 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 3:28:55 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
-Oct 02, 2023 3:30:30 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
-INFO: inicioSesión,Inicio de sesión,2023-10-02
+
+Oct 03, 2023 6:36:02 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 6:46:11 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 6:46:59 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 6:57:38 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 6:59:03 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 6:59:31 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 7:00:36 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 7:02:44 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 7:05:44 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 7:12:47 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 7:14:30 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: Agregar empleado,Empleado agregado,2023-10-03
+Oct 03, 2023 7:15:53 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03
+Oct 03, 2023 7:16:27 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: Agregar empleado,Empleado agregado,2023-10-03
+Oct 03, 2023 7:17:07 PM co.edu.uniquindio.banco.bancouq.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-10-03

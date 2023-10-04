@@ -176,6 +176,7 @@ public class EmpleadoViewController {
                 listaEmpleadosDto.add(empleadoDto);
                 mostrarMensaje("Notificación empleado", "Empleado creado", "El empleado se ha creado con éxito", AlertType.INFORMATION);
                 limpiarCamposEmpleado();
+                registrarAcciones("Empleado agregado",1, "Agregar empleado");
             }else{
                 mostrarMensaje("Notificación empleado", "Empleado no creado", "El empleado no se ha creado con éxito", AlertType.ERROR);
             }
@@ -184,6 +185,8 @@ public class EmpleadoViewController {
         }
 
     }
+
+
 
     private void eliminarEmpleado() {
         boolean empleadoEliminado = false;
@@ -254,6 +257,9 @@ public class EmpleadoViewController {
         txtFechaNacimieno.setText("");
         txtSalario.setText("");
         txtCodigo.setText("");
+    }
+    private void registrarAcciones(String mensaje, int nivel, String accion) {
+        empleadoControllerService.registrarAcciones(mensaje, nivel, accion);
     }
 
     private boolean datosValidos(EmpleadoDto empleadoDto) {

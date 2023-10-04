@@ -30,4 +30,9 @@ public class EmpleadoController implements IEmpleadoControllerService {
     public boolean actualizarEmpleado(String cedulaActual, EmpleadoDto empleadoDto) {
         return modelFactoryController.actualizarEmpleado(cedulaActual, empleadoDto);
     }
+
+    @Override
+    public void registrarAcciones(String mensaje, int nivel, String accion) {
+        modelFactoryController.registrarAccionesSistema(mensaje, nivel, accion);
+    }
 }

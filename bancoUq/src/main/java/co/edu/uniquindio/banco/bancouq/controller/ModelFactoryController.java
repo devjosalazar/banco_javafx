@@ -30,25 +30,25 @@ public class ModelFactoryController implements IModelFactoryService {
     public ModelFactoryController() {
         //1. inicializar datos y luego guardarlo en archivos
         System.out.println("invocación clase singleton");
-        cargarDatosBase();
-//        salvarDatosPrueba();
+        //cargarDatosBase();
+        //salvarDatosPrueba();
 
         //2. Cargar los datos de los archivos
-//		cargarDatosDesdeArchivos();
+		//cargarDatosDesdeArchivos();
 
         //3. Guardar y Cargar el recurso serializable binario
-//		cargarResourceBinario();
-//		guardarResourceBinario();
+		//cargarResourceBinario();
+		//guardarResourceBinario();
 
         //4. Guardar y Cargar el recurso serializable XML
-//		guardarResourceXML();
-//        cargarResourceXML();
+		//guardarResourceXML();
+        cargarResourceXML();
 
         //Siempre se debe verificar si la raiz del recurso es null
 
         if(banco == null){
-//            cargarDatosBase();
-//            guardarResourceXML();
+            cargarDatosBase();
+            guardarResourceXML();
         }
         registrarAccionesSistema("Inicio de sesión", 1, "inicioSesión");
     }
@@ -95,6 +95,7 @@ public class ModelFactoryController implements IModelFactoryService {
             if(!banco.verificarEmpleadoExistente(empleadoDto.cedula())) {
                 Empleado empleado = mapper.empleadoDtoToEmpleado(empleadoDto);
                 getBanco().agregarEmpleado(empleado);
+                guardarResourceXML();
             }
             return true;
         }catch (EmpleadoException e){

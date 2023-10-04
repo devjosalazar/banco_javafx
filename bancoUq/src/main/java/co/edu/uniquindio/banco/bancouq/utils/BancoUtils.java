@@ -10,7 +10,7 @@ public class BancoUtils {
         Banco banco = new Banco();
 
         Cliente cliente = new Cliente();
-        cliente.setNombre("juan");
+        cliente.setNombre("juan 2");
         cliente.setApellido("arias");
         cliente.setCedula("125454");
         cliente.setDireccion("Armenia");
@@ -41,7 +41,7 @@ public class BancoUtils {
 
 
         Empleado empleado = new Empleado();
-        empleado.setNombre("juan");
+        empleado.setNombre("juan manuel 1212");
         empleado.setApellido("arias");
         empleado.setCedula("125454");
         empleado.setTelefono("314");
